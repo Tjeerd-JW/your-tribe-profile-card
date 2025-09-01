@@ -1,5 +1,5 @@
 /* Stap 1: Selecteer de knop */
-let expandButton = document.querySelector('.profile-card-example-button')
+let expandButton = document.querySelector('.profile-card-button')
 
 /* Stap 2: Wacht tot iemand op die knop klikt */
 expandButton?.addEventListener('click', function() {
