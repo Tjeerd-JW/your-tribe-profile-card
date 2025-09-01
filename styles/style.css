@@ -2,11 +2,11 @@
   box-sizing: border-box;
 }
 
-html:has(.profile-card-example) {
+html:has(.profile-card) {
   height: 100vh;
 }
 
-body:has(.profile-card-example) {
+body:has(.profile-card) {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,13 +15,12 @@ body:has(.profile-card-example) {
   color: #10214e;
 }
 
-article.profile-card-example {
+article.profile-card {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  /* gap: 2rem; */
   width: 50vw;
   max-width: 25em;
   min-width: 20em;
@@ -31,22 +30,7 @@ article.profile-card-example {
   transition: .25s;
 }
 
-header.profile-card-example-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  justify-content: flex-end;
-
-  /* Je kunt selectors nesten! */
-  h1 {
-    margin: 2rem 0 0;
-    color: rgba(0, 239, 255, 1);
-  }
-
-}
-
-.profile-card-example-img {
+.profile-card-img {
   position: relative;
   top: 2rem;
   width: 10em;
@@ -58,60 +42,15 @@ header.profile-card-example-header {
   margin-bottom: 1rem;
 }
 
-.profile-card-example-dl {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas:
-    "html-dd css-dd js-dd"
-    "html-dt css-dt js-dt"
-  ;
-  justify-items: center;
-  align-items: start;
-  width: 100%;
-  margin-top: -3rem;
-  margin-bottom: 0;
-  padding: 5rem 0 3rem;
-  text-align: center;
-  background: rgb(255, 255, 255);
-
-  dt {
-    margin-top: .25rem;
-    padding-top: .25rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.3);
-    font-weight: bold;
-
-    &:nth-of-type(1) {
-      grid-area: html-dt;
-    }
-
-    &:nth-of-type(2) {
-      grid-area: css-dt;
-      transform: translateY(1rem);
-    }
-
-    &:nth-of-type(3) {
-      grid-area: js-dt;
-    }
-  }
-
-  dd {
-    margin: 0;
-    padding-left: .3rem;
-    transition: .25s .3s;
-
-    &:nth-of-type(2) {
-      transform: translateY(1rem);
-    }
-  }
-}
-
-
-
-.profile-card-example p {
+.profile-card p {
   margin: 0;
 }
 
-.profile-card-example>p {
+.profile-card h1 {
+  margin-bottom: 0;
+}
+
+.profile-card>p {
   width: 100%;
   margin-top: 0;
   text-align: center;
@@ -119,15 +58,15 @@ header.profile-card-example-header {
 
 
 .profile-info {
-  display: none;
   color: #10214e;
-  transition: linear .1s;
   margin: 0 auto 10px auto;
-
+  max-height: 0;
+  transition: max-height 1s;
+  overflow: hidden;
 }
 
-.profile-info a{
-  color: #10214e; 
+.profile-info a {
+  color: #10214e;
   text-decoration: none;
 }
 
@@ -142,12 +81,7 @@ header.profile-card-example-header {
   width: 100%;
   padding: 5px;
   border-radius: 10px;
-}
-
-.profile-card-button:hover {
-  background-color: rgb(40, 0, 72);
-  transition: ease-in-out 1s;
-
+  display: none;
 }
 
 .profile-content {
@@ -156,8 +90,21 @@ header.profile-card-example-header {
   width: 100%;
 }
 
+/* effects */
 
-/* Deze styles zijn van toepassing als je op de knop klikt */
-body.is-expanded .profile-info {
-  display: grid;
+.profile-card:hover .profile-info {
+  height: 100%;
+  max-height: 500px;
+}
+
+.profile-card:hover {
+  /* transform: rotateZ(360deg); */
+  transform: rotate3d(1, 1, 0, -40deg);
+  transition: ease-in-out 1.5s;
+}
+
+.profile-card:hover img {
+  transform: rotateZ(360deg);
+  transform: rotate3d(1, 1, 0, 360deg);
+  transition: ease-in-out 2.5s;
 }
