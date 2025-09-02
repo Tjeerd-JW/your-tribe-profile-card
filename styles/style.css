@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: open sans;
 }
 
 html:has(.profile-card) {
@@ -11,7 +12,6 @@ body:has(.profile-card) {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  font-family: open sans;
   color: #10214e;
 }
 
@@ -27,7 +27,7 @@ article.profile-card {
   border-radius: 1rem;
   background: rgb(182, 107, 243);
   box-shadow: 0 0 20px 20px rgba(0, 0, 0, .1);
-  transition: .25s;
+  transition: 1s;
 }
 
 .profile-card-img {
@@ -38,22 +38,8 @@ article.profile-card {
   border: 5px solid #fff;
   border-radius: 10em;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, .2);
-  transition: .25s .15s;
+  transition: 1s;
   margin-bottom: 1rem;
-}
-
-.profile-card p {
-  margin: 0;
-}
-
-.profile-card h1 {
-  margin-bottom: 0;
-}
-
-.profile-card>p {
-  width: 100%;
-  margin-top: 0;
-  text-align: center;
 }
 
 
@@ -70,9 +56,29 @@ article.profile-card {
   text-decoration: none;
 }
 
-.profile-info h2 {
-  margin-bottom: 0;
+.profile-info img {
+  width: 1.5rem;
+  height: auto;
+  margin: 0 5px;
 }
+
+.profile-card h1 {
+  margin: 15px 0 0 0;
+  font-size: 2.5rem;
+}
+
+.profile-info h2 {
+margin: 0 auto 0 auto;
+  font-size: 2rem;
+  width: fit-content;
+}
+
+.profile-card p {
+  margin: 0;
+  font-size: 1.5rem;
+    display: flex;
+}
+
 
 .profile-card-button {
   background-color: rgb(79, 0, 143);
@@ -90,6 +96,12 @@ article.profile-card {
   width: 100%;
 }
 
+.profile-card-links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* effects */
 
 .profile-card:hover .profile-info {
@@ -103,7 +115,7 @@ article.profile-card {
   transition: ease-in-out 1.5s;
 }
 
-.profile-card:hover img {
+.profile-card:hover .profile-card-img {
   transform: rotateZ(360deg);
   transform: rotate3d(1, 1, 0, 360deg);
   transition: ease-in-out 2.5s;
