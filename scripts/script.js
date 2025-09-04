@@ -1,17 +1,13 @@
-// /* Stap 1: Selecteer de knop */
-// let expandButton = document.querySelector('.profile-card-button')
+// let profileCard = document.querySelector('.profile-card')
 
-// /* Stap 2: Wacht tot iemand op die knop klikt */
-// expandButton?.addEventListener('click', function() {
+// profileCard?.addEventListener('click', function () {
 
-//   /* Stap 3: Verander een class zodra iemand op die knop klikt */
-//   document.body.classList.toggle('is-expanded')
+//     //   document.body.classList.toggle('background-effect')
+//     var audio = new Audio('../assets/staff.wav');
+//     audio.play();
 // })
 
-// function toggleInfo() {
-//  document.getElementById("profile-info").style.display = "block";
-// }
-
-// function toggleInfo() {
-//  document.getElementById("profile-info").style.display = "none";
+// window.onload = function() {
+//     var audio = new Audio('../assets/Sneaky-Snitch.mp3');
+//          audio.play();
 // }
