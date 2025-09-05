@@ -17,7 +17,6 @@ body {
   display: none;
 }
 
-
 body:has(.profile-card) {
   display: flex;
   justify-content: center;
@@ -39,7 +38,7 @@ article.profile-card {
   box-shadow: 0 0 20px 20px rgba(0, 0, 0, .1);
   transition: 1s;
   z-index: 1;
-  transform-style: preserve-3d;
+
 }
 
 .profile-card-img {
@@ -54,7 +53,6 @@ article.profile-card {
   margin-bottom: 1rem;
   transform-style: preserve-3d;
 }
-
 
 .profile-info {
   color: #102e4a;
